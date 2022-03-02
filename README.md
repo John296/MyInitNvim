@@ -1,3 +1,1 @@
-# hello-world
-my first repository
-!
+# 我的 neovim 配置
