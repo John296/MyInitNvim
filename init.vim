@@ -131,11 +131,11 @@ let g:airline_mode_map = {
             \ 'Rv'     : 'R',
             \ 's'      : 'S',
             \ 'S'      : 'S',
-            \ ''     : 'S',
+            \ '^S'     : 'S',
             \ 't'      : 'T',
             \ 'v'      : 'V',
             \ 'V'      : 'V',
-            \ ''     : 'V',
+            \ '^V'     : 'V',
             \ }
 
 let g:python_highlight_all=1
