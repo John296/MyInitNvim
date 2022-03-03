@@ -56,7 +56,11 @@ nmap <leader>w :set splitright<CR>:vsplit<CR>
 nnoremap gn :bnext<CR>
 nnoremap gp :bprevious<CR>
 
-call plug#begin('~/AppData/Local/nvim/plugged')
+if has("win32")
+    call plug#begin('~/AppData/Local/nvim/plugged')
+else
+    call plug#begin('~/.config/nvim/plugged')
+endif
 Plug 'wsdjeg/vim-todo'
 Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf', { 'do': {-> fzf#install() } }
@@ -148,7 +152,7 @@ let g:airline_stl_path_style='short'
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 let g:airline#extensions#tabline#enabled=1
-let g:fzf_preview_window=['right:40%:hidden', 'ctrl-/']
+let g:fzf_preview_window=['right:40%', 'ctrl-/']
 let g:startify_custom_header='startify#pad(startify#fortune#boxed())'
 let g:spacevim_todo_labels=map(['todo', 'question', 'idea', 'fixme', 'mark'], '"@" . v:val')
 let g:vsnip_snippet_dir = expand('~/AppData/Local/nvim/.vsnip')
