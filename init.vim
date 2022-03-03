@@ -61,8 +61,8 @@ if has("win32")
 else
     call plug#begin('~/.config/nvim/plugged')
 endif
-Plug 'wsdjeg/vim-todo'
 Plug 'morhetz/gruvbox'
+Plug 'John296/vim-todo'
 Plug 'junegunn/fzf', { 'do': {-> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
