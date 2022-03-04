@@ -1,11 +1,23 @@
 # 我的 neovim 配置
 
-Windows路径：
-```
-~/AppData/Local/nvim/
+## 安装
+
+- Windows
+```sh
+$git clone https://github.com/john2972/myinitnvim.git ~/AppData/Local/nvim/
 ```
 
-Linux/macOS路径:
+- Linux/macOS
+```sh
+$git clone https://github.com/john2972/myinitnvim.git ~/.config/nvim/
 ```
-~/.config/nvim/
+
+打开 neovim 执行
+```
+:PlugInstall
+```
+
+Linux/macOS 需要授予 fzf 预览脚本执行权限
+```sh
+$sudo chmod +x .config/nvim/plugged/fzf.vim/bin/preview.sh
 ```
