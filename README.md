@@ -21,7 +21,7 @@ $git clone https://github.com/john2972/myinitnvim.git ~/.config/nvim/
 ```
 授予 fzf 预览脚本执行权限
 ```sh
-$sudo chmod +x .config/nvim/plugged/fzf.vim/bin/preview.sh
+$sudo chmod +x ~/.config/nvim/plugged/fzf.vim/bin/preview.sh
 ```
 
 ## 配置
