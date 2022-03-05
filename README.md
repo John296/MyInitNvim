@@ -21,3 +21,8 @@ Linux/macOS 需要授予 fzf 预览脚本执行权限
 ```sh
 $sudo chmod +x .config/nvim/plugged/fzf.vim/bin/preview.sh
 ```
+
+## 配置
+
+- 自动补全设置
+安装对应的 language server, 并添加至 lua/settings/nvim-cmp.lua 的 servers 列表中
