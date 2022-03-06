@@ -108,7 +108,7 @@ nnoremap <silent> <leader>v :call UncolorAllWords()<CR>
 let g:airline_filetype_overrides = {
             \ 'coc-explorer':  [ 'CoC Explorer', '' ],
             \ 'defx':  ['defx', '%{b:defx.paths[0]}'],
-            \ 'fugitive': ['Git', '%{airline#util#wrap(airline#extensions#branch#get_head(),80)}'],
+            \ 'fugitive': ['', '%{airline#util#wrap(airline#extensions#branch#get_head(),80)}'],
             \ 'floggraph':  [ 'Flog', '%{get(b:, "flog_status_summary", "")}' ],
             \ 'gundo': [ 'Gundo', '' ],
             \ 'help':  [ 'Help', '%f' ],
