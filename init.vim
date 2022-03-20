@@ -53,8 +53,8 @@ nmap <leader>c <C-w>c
 nmap <leader>m :nohlsearch<CR>
 nmap <leader>w :set splitright<CR>:vsplit<CR>
 
-nnoremap gn :bnext<CR>
-nnoremap gp :bprevious<CR>
+nnoremap gn :bnext<CR>:lcd %:p:h<CR>
+nnoremap gp :bprevious<CR>:lcd %:p:h<CR>
 
 if has("win32")
     call plug#begin('~/AppData/Local/nvim/plugged')
@@ -115,7 +115,7 @@ let g:airline_filetype_overrides = {
             \ 'minibufexpl': [ 'MiniBufExplorer', '' ],
             \ 'nerdtree': [ get(g:, 'NERDTreeStatusline', ''), '' ],
             \ 'startify': [ '', '' ],
-            \ 'vim-plug': [ 'Plugins', '' ],
+            \ 'vim-plug': [ '', '' ],
             \ 'vimfiler': [ 'vimfiler', '%{vimfiler#get_status_string()}' ],
             \ 'vimshell': ['vimshell','%{vimshell#get_status_string()}'],
             \ 'vaffle' : [ 'Vaffle', '%{b:vaffle.dir}' ],
