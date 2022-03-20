@@ -111,7 +111,7 @@ let g:airline_filetype_overrides = {
             \ 'fugitive': ['', '%{airline#util#wrap(airline#extensions#branch#get_head(),80)}'],
             \ 'floggraph':  [ 'Flog', '%{get(b:, "flog_status_summary", "")}' ],
             \ 'gundo': [ 'Gundo', '' ],
-            \ 'help':  [ 'Help', '%f' ],
+            \ 'help':  [ '', '%f' ],
             \ 'minibufexpl': [ 'MiniBufExplorer', '' ],
             \ 'nerdtree': [ get(g:, 'NERDTreeStatusline', ''), '' ],
             \ 'startify': [ '', '' ],
@@ -192,8 +192,8 @@ let g:cpp_simple_highlight = 1
 lua require('settings')
 
 map <leader>f <Plug>(easymotion-bd-w)
-nmap <leader>f <Plug>(easymotion-overwin-w)
 map <leader>L <Plug>(easymotion-bd-jk)
+nmap <leader>f <Plug>(easymotion-overwin-w)
 nmap <leader>L <Plug>(easymotion-overwin-line)
 nnoremap ts :Startify<CR>
 nnoremap <leader>t :OpenTodo<CR>
