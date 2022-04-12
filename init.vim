@@ -62,13 +62,14 @@ else
     call plug#begin('~/.config/nvim/plugged')
 endif
 Plug 'morhetz/gruvbox'
-Plug 'John296/vim-todo'
+Plug 'john296/vim-todo'
 Plug 'junegunn/fzf', { 'do': {-> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
+Plug 'APZelos/blamer.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-airline/vim-airline'
