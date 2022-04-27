@@ -28,3 +28,7 @@ sudo chmod +x ~/.config/nvim/plugged/fzf.vim/bin/preview.sh
 
 - 自动补全设置
 安装对应的 language server, 并添加至 lua/settings/nvim-cmp.lua 的 servers 列表中
+
+- airline-themes
+可替换 gruvbox 的配色至皮肤：
+`nvim/plugged/vim-airline-theme/autoload/airline/themes/bubblegum.vim`
