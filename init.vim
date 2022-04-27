@@ -65,20 +65,22 @@ Plug 'morhetz/gruvbox'
 Plug 'john296/vim-todo'
 Plug 'junegunn/fzf', { 'do': {-> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'preservim/nerdtree'
+Plug 'godlygeek/tabular'
+Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-fugitive'
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
 Plug 'APZelos/blamer.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'jdhao/better-escape.vim'
 Plug 'vim-python/python-syntax'
 Plug 'easymotion/vim-easymotion'
 Plug 'lfv89/vim-interestingwords'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do' : ':TSUpdate' }
 """
@@ -145,7 +147,8 @@ let g:airline_mode_map = {
 
 let g:python_highlight_all=1
 let g:loaded_python_provider=0
-let g:airline_theme='bubblegum'
+"let g:airline_theme='bubblegum'
+let g:airline_theme='Mytheme'
 let g:airline_powerline_fonts=1
 let g:fzf_layout={'down': '40%'}
 let g:better_escape_shortcut='jj'
@@ -157,6 +160,7 @@ let g:fzf_preview_window=['right:40%', 'ctrl-/']
 let g:startify_custom_header='startify#pad(startify#fortune#boxed())'
 let g:spacevim_todo_labels=map(['todo', 'question', 'idea', 'fixme', 'mark'], '"@" . v:val')
 let g:vsnip_snippet_dir = expand('~/AppData/Local/nvim/.vsnip')
+let g:NERDSpaceDelims=1
 
 let g:airline_powerline_fonts=1
 
