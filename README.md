@@ -1,4 +1,5 @@
 # 我的 neovim 配置
+<img width="810" alt="20220427104753" src="https://user-images.githubusercontent.com/22301072/165429827-cd018a8b-2c3e-49a3-9c1d-ab7e98e44c0b.png">
 
 ## 安装
 
@@ -31,4 +32,5 @@ sudo chmod +x ~/.config/nvim/plugged/fzf.vim/bin/preview.sh
 
 - airline-themes
 可替换 gruvbox 的配色至皮肤：
+
 `nvim/plugged/vim-airline-theme/autoload/airline/themes/bubblegum.vim`
