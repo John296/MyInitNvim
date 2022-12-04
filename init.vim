@@ -148,12 +148,12 @@ let g:airline_mode_map = {
 
 let g:python_highlight_all=1
 let g:loaded_python_provider=0
-let g:airline_theme='Mytheme'
+let g:airline_theme='bubblegum'
 let g:airline_powerline_fonts=1
 let g:fzf_layout={'down': '40%'}
 let g:better_escape_shortcut='jj'
 let g:airline_stl_path_style='short'
-let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowExpanbblEdable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
 let g:airline#extensions#tabline#enabled=1
 let g:fzf_preview_window=['right:40%', 'ctrl-/']
