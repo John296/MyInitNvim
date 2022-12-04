@@ -5,7 +5,7 @@
 
 - Windows
 ```sh
-git clone https://github.com/john2972/myinitnvim.git ~/AppData/Local/nvim/
+git clone https://github.com/john296/myinitnvim.git ~/AppData/Local/nvim/
 ```
 打开 neovim 执行
 ```
@@ -14,7 +14,7 @@ git clone https://github.com/john2972/myinitnvim.git ~/AppData/Local/nvim/
 
 - Linux/macOS
 ```sh
-git clone https://github.com/john2972/myinitnvim.git ~/.config/nvim/
+git clone https://github.com/john296/myinitnvim.git ~/.config/nvim/
 ```
 打开 neovim 执行
 ```
