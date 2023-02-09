@@ -159,7 +159,13 @@ let g:airline#extensions#tabline#enabled=1
 let g:fzf_preview_window=['right:40%', 'ctrl-/']
 let g:startify_custom_header='startify#pad(startify#fortune#boxed())'
 let g:spacevim_todo_labels=map(['todo', 'question', 'idea', 'fixme', 'mark'], '"@" . v:val')
-let g:vsnip_snippet_dir = expand('~/AppData/Local/nvim/.vsnip')
+
+if has("win32")
+    let g:vsnip_snippet_dir = expand('~/AppData/Local/nvim/.vsnip')
+else
+    let g:vsnip_snippet_dir = expand('~/.config/nvim/.vsnip')
+endif
+
 let g:NERDSpaceDelims=1
 
 let g:airline_powerline_fonts=1
