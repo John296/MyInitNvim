@@ -72,16 +72,17 @@ Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'APZelos/blamer.nvim'
+Plug 'Bekaboo/dropbar.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'plasticboy/vim-markdown'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'jdhao/better-escape.vim'
 Plug 'vim-python/python-syntax'
+Plug 'shellRaining/hlchunk.nvim'
 Plug 'easymotion/vim-easymotion'
 Plug 'lfv89/vim-interestingwords'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do' : ':TSUpdate' }
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 """

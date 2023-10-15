@@ -5,3 +5,5 @@ require('settings.lspkind')
 require('settings.lspsaga')
 
 require('colorizer').setup()
+require('hlchunk').setup({})
+require('dropbar').setup()
