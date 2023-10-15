@@ -247,7 +247,7 @@ func! CompileRunGcc()
     elseif &filetype == 'cpp'
         exec '!g++ % -o %<'
     elseif &filetype == 'python'
-        exec '! python3 %'
+        exec '! python %'
     elseif &filetype == 'sh'
         :!time bash %
     endif
