@@ -39,6 +39,7 @@ set textwidth=80
 set scrolloff=5
 
 set wildmenu
+set rtp+=/opt/homebrew/opt/fzf
 
 syntax enable
 syntax on
@@ -254,7 +255,9 @@ func! CompileRunGcc()
     elseif &filetype == 'cpp'
         exec '!g++ % -o %<'
     elseif &filetype == 'python'
-        exec '! python %'
+        exec '!python %'
+    elseif &filetype == 'lua'
+        exec '!lua %'
     elseif &filetype == 'sh'
         :!time bash %
     endif
