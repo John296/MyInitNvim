@@ -1,6 +1,6 @@
 require'nvim-treesitter.configs'.setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed ={"cpp", "python", "lua"},
+  ensure_installed ={"cpp", "python", "lua", "rust", "markdown"},
 
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -13,7 +13,7 @@ require'nvim-treesitter.configs'.setup {
     enable = true,
 
     -- NOTE: these are the names of the parsers and not the filetype.
-    disable = { "rb", "rust" },
+    disable = { "rb", "go" },
 
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
