@@ -6,13 +6,3 @@ require('settings.lspsaga')
 
 require('colorizer').setup()
 require('hlchunk').setup({})
---[[
-   [ require('dropbar.config').setup({
-   [     opts.icons = {
-   [         enable = true,
-   [         kinds = {
-   [             use_devicons = false,
-   [         },
-   [     },
-   [ })
-   ]]
