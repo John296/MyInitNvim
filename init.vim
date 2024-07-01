@@ -101,6 +101,10 @@ Plug 'tami5/lspsaga.nvim'
 Plug 'folke/lsp-colors.nvim'
 """
 Plug 'ryanoasis/vim-devicons'
+Plug 'mfussenegger/nvim-dap'
+Plug 'nvim-neotest/nvim-nio'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'theHamSta/nvim-dap-virtual-text'
 call plug#end()
 
 color gruvbox
@@ -355,3 +359,11 @@ let g:mkdp_page_title = '「${name}」'
 " these filetypes will have MarkdownPreview... commands
 let g:mkdp_filetypes = ['markdown']
 "=============================================================================
+"
+
+" mnemonic 'di' = 'debug inspect' (pick your own, if you prefer!)
+
+" for normal mode - the word under the cursor
+nmap <Leader>di <Plug>VimspectorBalloonEval
+" for visual mode, the visually selected text
+xmap <Leader>di <Plug>VimspectorBalloonEval
