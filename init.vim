@@ -105,6 +105,7 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'nvim-neotest/nvim-nio'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'theHamSta/nvim-dap-virtual-text'
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 color gruvbox
@@ -212,9 +213,14 @@ map <leader>f <Plug>(easymotion-bd-w)
 map <leader>L <Plug>(easymotion-bd-jk)
 nmap <leader>f <Plug>(easymotion-overwin-w)
 nmap <leader>L <Plug>(easymotion-overwin-line)
-nnoremap ts :Startify<CR>
-nnoremap <leader>t :OpenTodo<CR>
 nnoremap <F2> :NERDTreeToggle<CR>
+
+nnoremap <leader>do :lua require("dapui").open()<CR>
+nnoremap <leader>dc :lua require("dapui").close()<CR>
+nnoremap <leader>td :OpenTodo<CR>
+nnoremap <leader>ts :Startify<CR>
+nnoremap <leader>tn :FloatermNew<CR>
+nnoremap <leader>tt :FloatermToggle<CR>
 
 
 highlight  CursorLine          guifg=NONE   guibg=#3a3d4d  guisp=#3a3d4d  ctermbg=236

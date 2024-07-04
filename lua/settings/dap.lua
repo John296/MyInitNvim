@@ -1,7 +1,8 @@
 local dap = require('dap')
 dap.adapters.lldb = ({
   type = 'executable',
-  command = '/usr/bin/lldb-vscode', -- adjust as needed, must be absolute path
+  -- command = '/usr/bin/lldb-vscode', -- adjust as needed, must be absolute path
+  command = '/data/data/com.termux/files/usr/bin/lldb-dap', -- adjust as needed, must be absolute path
   name = 'lldb'
 })
 
