@@ -104,8 +104,13 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'mfussenegger/nvim-dap'
 Plug 'nvim-neotest/nvim-nio'
 Plug 'rcarriga/nvim-dap-ui'
+Plug 'rcarriga/nvim-notify'
 Plug 'theHamSta/nvim-dap-virtual-text'
 Plug 'voldikss/vim-floaterm'
+"""
+Plug 'folke/noice.nvim'
+Plug 'MunifTanjim/nui.nvim'
+"""
 call plug#end()
 
 color gruvbox
