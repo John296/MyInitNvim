@@ -101,11 +101,12 @@ Plug 'tami5/lspsaga.nvim'
 Plug 'folke/lsp-colors.nvim'
 """
 Plug 'ryanoasis/vim-devicons'
-Plug 'mfussenegger/nvim-dap'
+" Plug 'mfussenegger/nvim-dap'
 Plug 'nvim-neotest/nvim-nio'
-Plug 'rcarriga/nvim-dap-ui'
+" Plug 'rcarriga/nvim-dap-ui'
 Plug 'rcarriga/nvim-notify'
-Plug 'theHamSta/nvim-dap-virtual-text'
+" Plug 'theHamSta/nvim-dap-virtual-text'
+Plug 'sphamba/smear-cursor.nvim'
 Plug 'voldikss/vim-floaterm'
 """
 Plug 'folke/noice.nvim'
@@ -216,8 +217,8 @@ lua require('settings')
 
 map <leader>f <Plug>(easymotion-bd-w)
 map <leader>L <Plug>(easymotion-bd-jk)
-nmap <leader>f <Plug>(easymotion-overwin-w)
-nmap <leader>L <Plug>(easymotion-overwin-line)
+" nmap <leader>f <Plug>(easymotion-overwin-w)
+" nmap <leader>L <Plug>(easymotion-overwin-line)
 nnoremap <F2> :NERDTreeToggle<CR>
 
 nnoremap <leader>do :lua require("dapui").open()<CR>
@@ -238,6 +239,7 @@ highlight  DiffChange          guibg=NONE   ctermbg=NONE
 highlight  SignifyLineDelete   guibg=NONE   ctermbg=NONE
 highlight  SignifyLineChange   guibg=NONE   ctermbg=NONE
 highlight  Normal              guibg=NONE   ctermbg=NONE
+highlight  StatusLine          gui=NONE
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BufferCloseOthers
