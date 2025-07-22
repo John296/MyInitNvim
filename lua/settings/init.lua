@@ -1,14 +1,16 @@
+
 require('settings.nvim-treesitter')
 require('settings.smear_cursor')
 require('settings.lsp-colors')
 require('settings.nvim-cmp')
 require('settings.lspkind')
--- require('settings.lspsaga')
 require('settings.noice')
 -- require('settings.dap')
+
 require('render-markdown').setup()
 require('colorizer').setup()
 require('hlchunk').setup({})
+require('lspsaga').setup()
 require('dropbar').setup()
 require('notify').setup()
 -- require('dapui').setup()
