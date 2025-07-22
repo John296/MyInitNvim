@@ -97,7 +97,7 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/cmp-emoji'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'tami5/lspsaga.nvim'
+Plug 'nvimdev/lspsaga.nvim'
 Plug 'onsails/lspkind-nvim'
 Plug 'folke/lsp-colors.nvim'
 """
