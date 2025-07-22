@@ -85,32 +85,33 @@ Plug 'easymotion/vim-easymotion'
 Plug 'lfv89/vim-interestingwords'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'eandrju/cellular-automaton.nvim'
+Plug 'MeanderingProgrammer/render-markdown.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do' : ':TSUpdate' }
 """
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/cmp-emoji'
 Plug 'hrsh7th/vim-vsnip'
-Plug 'onsails/lspkind-nvim'
+Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'tami5/lspsaga.nvim'
+Plug 'onsails/lspkind-nvim'
 Plug 'folke/lsp-colors.nvim'
 """
-Plug 'ryanoasis/vim-devicons'
-" Plug 'mfussenegger/nvim-dap'
-Plug 'nvim-neotest/nvim-nio'
-" Plug 'rcarriga/nvim-dap-ui'
-Plug 'rcarriga/nvim-notify'
-" Plug 'theHamSta/nvim-dap-virtual-text'
-Plug 'sphamba/smear-cursor.nvim'
-Plug 'voldikss/vim-floaterm'
-"""
 Plug 'folke/noice.nvim'
+Plug 'rcarriga/nvim-notify'
 Plug 'MunifTanjim/nui.nvim'
+Plug 'nvim-neotest/nvim-nio'
+Plug 'voldikss/vim-floaterm'
+Plug 'ryanoasis/vim-devicons'
+Plug 'sphamba/smear-cursor.nvim'
+"""
+" Plug 'rcarriga/nvim-dap-ui'
+" Plug 'mfussenegger/nvim-dap'
+" Plug 'theHamSta/nvim-dap-virtual-text'
 """
 call plug#end()
 
@@ -199,20 +200,6 @@ let g:airline_symbols.readonly = "\uF023"
 let g:airline#extensions#nvimlsp#error_symbol = "\uF057 "
 let g:airline#extensions#nvimlsp#warning_symbol = "\uF06A "
 
-" vim-cpp-modern settings
-" Enable function highlighting (affects both C and C++ files)
-let g:cpp_function_highlight = 1
-
-" Enable highlighting of C++11 attributes
-let g:cpp_attributes_highlight = 1
-
-" Highlight struct/class member variables (affects both C and C++ files)
-let g:cpp_member_highlight = 1
-
-" Put all standard C and C++ keywords under Vim's highlight group 'Statement'
-" (affects both C and C++ files)
-let g:cpp_simple_highlight = 1
-
 lua require('settings')
 
 map <leader>f <Plug>(easymotion-bd-w)
@@ -221,8 +208,8 @@ map <leader>L <Plug>(easymotion-bd-jk)
 " nmap <leader>L <Plug>(easymotion-overwin-line)
 nnoremap <F2> :NERDTreeToggle<CR>
 
-nnoremap <leader>do :lua require("dapui").open()<CR>
-nnoremap <leader>dc :lua require("dapui").close()<CR>
+" nnoremap <leader>do :lua require("dapui").open()<CR>
+" nnoremap <leader>dc :lua require("dapui").close()<CR>
 nnoremap <leader>td :OpenTodo<CR>
 nnoremap <leader>ts :Startify<CR>
 nnoremap <leader>tn :FloatermNew<CR>

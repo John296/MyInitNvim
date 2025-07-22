@@ -8,8 +8,15 @@ require('notify').setup({
     background_colour = '#000000',
     render = "compact",--minimal default
     stages = "slide",
-    timeout = 1000,
+    timeout = 2000,
     minimum_width = 50,
+    icons = {
+        ERROR = '',
+        WARN = '',
+        INFO = '',
+        DEBUG = '',
+        TRACE = '✎',
+    },
 })
 
 require('noice').setup({
