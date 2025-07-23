@@ -9,7 +9,6 @@ require('settings.noice')
 
 require('colorizer').setup()
 require('hlchunk').setup({})
-require('lspsaga').setup()
 require('dropbar').setup()
 require('notify').setup()
 -- require('dapui').setup()
