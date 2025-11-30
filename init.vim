@@ -85,20 +85,22 @@ Plug 'lfv89/vim-interestingwords'
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'eandrju/cellular-automaton.nvim'
+Plug 'rachartier/tiny-inline-diagnostic.nvim'
 Plug 'MeanderingProgrammer/render-markdown.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do' : ':TSUpdate' }
 """
 Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/cmp-cmdline'
-Plug 'hrsh7th/cmp-emoji'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'onsails/lspkind-nvim'
-Plug 'folke/lsp-colors.nvim'
+Plug 'saghen/blink.cmp'
+"Plug 'hrsh7th/nvim-cmp'
+"Plug 'hrsh7th/cmp-path'
+"Plug 'hrsh7th/cmp-vsnip'
+"Plug 'hrsh7th/cmp-buffer'
+"Plug 'hrsh7th/cmp-cmdline'
+"Plug 'hrsh7th/cmp-emoji'
+"Plug 'hrsh7th/vim-vsnip'
+"Plug 'hrsh7th/cmp-nvim-lsp'
+"Plug 'onsails/lspkind-nvim'
+"Plug 'folke/lsp-colors.nvim'
 """
 Plug 'folke/noice.nvim'
 Plug 'rcarriga/nvim-notify'
@@ -199,7 +201,30 @@ let g:airline_symbols.readonly = "\uF023"
 let g:airline#extensions#nvimlsp#error_symbol = "\uF057 "
 let g:airline#extensions#nvimlsp#warning_symbol = "\uF06A "
 
-lua require('settings')
+lua <<EOF
+require('settings')
+vim.lsp.enable({"lua_ls", "clangd", "pylsp"})
+vim.diagnostic.config({ virtual_text = false })
+
+local map = vim.keymap.set
+
+vim.api.nvim_create_autocmd("LspAttach", {
+    group = vim.api.nvim_create_augroup("LspKeymap", {}),
+    callback = function(ev)
+        local opts = function(desc)
+            return { buffer = ev.buf, desc = desc }
+        end
+
+        map("n", "K", vim.lsp.buf.hover, opts("LSP Hover"))
+        map("n", "gd", vim.lsp.buf.definition, opts("Goto Definition"))
+        map("n", "gD", vim.lsp.buf.declaration, opts("Goto Declaration"))
+        map("n", "gr", vim.lsp.buf.references, opts("List References"))
+        map("n", "gi", vim.lsp.buf.implementation, opts("Goto Implementation"))
+        map("n", "gt", vim.lsp.buf.type_definition, opts("Type Definition"))
+        map("n", "gx", vim.lsp.buf.code_action, opts("Code Action"))
+    end,
+    })
+EOF
 
 map <leader>f <Plug>(easymotion-bd-w)
 map <leader>L <Plug>(easymotion-bd-jk)
