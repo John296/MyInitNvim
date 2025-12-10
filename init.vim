@@ -91,16 +91,6 @@ Plug 'nvim-treesitter/nvim-treesitter', { 'do' : ':TSUpdate' }
 """
 Plug 'neovim/nvim-lspconfig'
 Plug 'saghen/blink.cmp'
-"Plug 'hrsh7th/nvim-cmp'
-"Plug 'hrsh7th/cmp-path'
-"Plug 'hrsh7th/cmp-vsnip'
-"Plug 'hrsh7th/cmp-buffer'
-"Plug 'hrsh7th/cmp-cmdline'
-"Plug 'hrsh7th/cmp-emoji'
-"Plug 'hrsh7th/vim-vsnip'
-"Plug 'hrsh7th/cmp-nvim-lsp'
-"Plug 'onsails/lspkind-nvim'
-"Plug 'folke/lsp-colors.nvim'
 """
 Plug 'folke/noice.nvim'
 Plug 'rcarriga/nvim-notify'
@@ -109,10 +99,6 @@ Plug 'nvim-neotest/nvim-nio'
 Plug 'voldikss/vim-floaterm'
 Plug 'ryanoasis/vim-devicons'
 Plug 'sphamba/smear-cursor.nvim'
-"""
-" Plug 'rcarriga/nvim-dap-ui'
-" Plug 'mfussenegger/nvim-dap'
-" Plug 'theHamSta/nvim-dap-virtual-text'
 """
 call plug#end()
 
@@ -232,8 +218,6 @@ map <leader>L <Plug>(easymotion-bd-jk)
 " nmap <leader>L <Plug>(easymotion-overwin-line)
 nnoremap <F2> :NERDTreeToggle<CR>
 
-" nnoremap <leader>do :lua require("dapui").open()<CR>
-" nnoremap <leader>dc :lua require("dapui").close()<CR>
 nnoremap <leader>td :OpenTodo<CR>
 nnoremap <leader>ts :Startify<CR>
 nnoremap <leader>tn :FloatermNew<CR>
