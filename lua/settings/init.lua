@@ -1,4 +1,4 @@
-require('settings.nvim-treesitter')
+-- require('settings.nvim-treesitter')
 require('settings.render-markdown')
 require('settings.smear_cursor')
 -- require('settings.lsp-colors')
