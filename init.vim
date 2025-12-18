@@ -87,7 +87,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'eandrju/cellular-automaton.nvim'
 Plug 'rachartier/tiny-inline-diagnostic.nvim'
 Plug 'MeanderingProgrammer/render-markdown.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', { 'do' : ':TSUpdate' }
+" Plug 'nvim-treesitter/nvim-treesitter', { 'do' : ':TSUpdate' }
 """
 Plug 'neovim/nvim-lspconfig'
 Plug 'saghen/blink.cmp'
