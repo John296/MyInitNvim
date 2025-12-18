@@ -190,7 +190,6 @@ let g:airline#extensions#nvimlsp#warning_symbol = "\uF06A "
 lua <<EOF
 require('settings')
 vim.lsp.enable({"lua_ls", "clangd", "pylsp"})
-vim.diagnostic.config({ virtual_text = false })
 
 local map = vim.keymap.set
 
@@ -210,6 +209,22 @@ vim.api.nvim_create_autocmd("LspAttach", {
         map("n", "gx", vim.lsp.buf.code_action, opts("Code Action"))
     end,
     })
+
+-- 配置 diagnostic 显示
+vim.diagnostic.config({
+    virtual_text = false,
+    update_in_insert = false,
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = "●",
+            [vim.diagnostic.severity.WARN] = "●",
+            [vim.diagnostic.severity.INFO] = "●",
+            [vim.diagnostic.severity.HINT] = "●",
+        },
+    },
+    severity_sort = true,
+})
+
 EOF
 
 map <leader>f <Plug>(easymotion-bd-w)
