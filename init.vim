@@ -76,14 +76,15 @@ Plug 'Bekaboo/dropbar.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/vim-markdown'
 Plug 'preservim/nerdcommenter'
-Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline'
 Plug 'jdhao/better-escape.vim'
 Plug 'vim-python/python-syntax'
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'shellRaining/hlchunk.nvim'
 Plug 'easymotion/vim-easymotion'
 Plug 'lfv89/vim-interestingwords'
 Plug 'norcalli/nvim-colorizer.lua'
-Plug 'vim-airline/vim-airline-themes'
+" Plug 'vim-airline/vim-airline-themes'
 Plug 'eandrju/cellular-automaton.nvim'
 Plug 'rachartier/tiny-inline-diagnostic.nvim'
 Plug 'MeanderingProgrammer/render-markdown.nvim'
@@ -110,53 +111,12 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 nnoremap <silent> <leader>b :call InterestingWords('n')<CR>
 nnoremap <silent> <leader>v :call UncolorAllWords()<CR>
 
-let g:airline_filetype_overrides = {
-            \ 'coc-explorer':  [ 'CoC Explorer', '' ],
-            \ 'defx':  ['defx', '%{b:defx.paths[0]}'],
-            \ 'fugitive': ['', '%{airline#util#wrap(airline#extensions#branch#get_head(),80)}'],
-            \ 'floggraph':  [ 'Flog', '%{get(b:, "flog_status_summary", "")}' ],
-            \ 'gundo': [ 'Gundo', '' ],
-            \ 'help':  [ '', '%f' ],
-            \ 'minibufexpl': [ 'MiniBufExplorer', '' ],
-            \ 'nerdtree': [ get(g:, 'NERDTreeStatusline', ''), '' ],
-            \ 'startify': [ '', '' ],
-            \ 'vim-plug': [ '', '' ],
-            \ 'vimfiler': [ 'vimfiler', '%{vimfiler#get_status_string()}' ],
-            \ 'vimshell': ['vimshell','%{vimshell#get_status_string()}'],
-            \ 'vaffle' : [ 'Vaffle', '%{b:vaffle.dir}' ],
-            \ }
-
-let g:airline_mode_map = {
-            \ '__'     : '-',
-            \ 'c'      : 'C',
-            \ 'i'      : 'I',
-            \ 'ic'     : 'I',
-            \ 'ix'     : 'I',
-            \ 'n'      : 'N',
-            \ 'multi'  : 'M',
-            \ 'ni'     : 'N',
-            \ 'no'     : 'N',
-            \ 'R'      : 'R',
-            \ 'Rv'     : 'R',
-            \ 's'      : 'S',
-            \ 'S'      : 'S',
-            \ '^S'     : 'S',
-            \ 't'      : 'T',
-            \ 'v'      : 'V',
-            \ 'V'      : 'V',
-            \ '^V'     : 'V',
-            \ }
-
 let g:python_highlight_all=1
 let g:loaded_python_provider=0
-let g:airline_theme='bubblegum'
-let g:airline_powerline_fonts=1
 let g:fzf_layout={'down': '40%'}
 let g:better_escape_shortcut='jj'
-let g:airline_stl_path_style='short'
 let g:NERDTreeDirArrowExpanbblEdable = '+'
 let g:NERDTreeDirArrowCollapsible = '-'
-let g:airline#extensions#tabline#enabled=1
 let g:fzf_preview_window=['right:40%', 'ctrl-/']
 let g:startify_custom_header='startify#pad(startify#fortune#boxed())'
 let g:spacevim_todo_labels=map(['todo', 'question', 'idea', 'fixme', 'mark'], '"@" . v:val')
@@ -168,24 +128,6 @@ else
 endif
 
 let g:NERDSpaceDelims=1
-
-let g:airline_powerline_fonts=1
-
-if !exists('g:airline_symbols')
-    let g:airline_symbols={}
-endif
-
-let g:airline_left_sep = "\uE0B4"
-let g:airline_left_alt_sep = "\uE38E"
-let g:airline_right_sep = "\uE0B6"
-let g:airline_right_alt_sep = "\uE0B7"
-let g:airline_symbols.branch = "\uF418"
-let g:airline_symbols.colnr = "\uF142"
-let g:airline_symbols.linenr = " \uF44E "
-let g:airline_symbols.maxlinenr = " "
-let g:airline_symbols.readonly = "\uF023"
-let g:airline#extensions#nvimlsp#error_symbol = "\uF057 "
-let g:airline#extensions#nvimlsp#warning_symbol = "\uF06A "
 
 lua <<EOF
 require('settings')
