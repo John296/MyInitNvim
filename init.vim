@@ -47,15 +47,15 @@ syntax on
 let mapleader=","
 
 inoremap jj <ESC>
-nmap <leader>s :w<CR>
-nmap <leader>q :q<CR>
-nmap <leader>x :bd<CR>
+nmap <leader>s <Cmd>w<CR>
+nmap <leader>q <Cmd>q<CR>
+nmap <leader>x <Cmd>bd<CR>
 nmap <leader>c <C-w>c
-nmap <leader>m :nohlsearch<CR>
-nmap <leader>w :set splitright<CR>:vsplit<CR>
+nmap <leader>m <Cmd>nohlsearch<CR>
+nmap <leader>w <Cmd>set splitright<CR><Cmd>vsplit<CR>
 
-nnoremap gn :bnext<CR>:lcd %:p:h<CR>
-nnoremap gp :bprevious<CR>:lcd %:p:h<CR>
+nnoremap gn <Cmd>bnext<CR><Cmd>lcd %:p:h<CR>
+nnoremap gp <Cmd>bprevious<CR><Cmd>lcd %:p:h<CR>
 
 if has("win32")
     call plug#begin('~/AppData/Local/nvim/plugged')
@@ -107,8 +107,8 @@ color gruvbox
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-nnoremap <silent> <leader>b :call InterestingWords('n')<CR>
-nnoremap <silent> <leader>v :call UncolorAllWords()<CR>
+nnoremap <silent> <leader>b <Cmd>call InterestingWords('n')<CR>
+nnoremap <silent> <leader>v <Cmd>call UncolorAllWords()<CR>
 
 let g:airline_filetype_overrides = {
             \ 'coc-explorer':  [ 'CoC Explorer', '' ],
@@ -229,14 +229,13 @@ EOF
 
 map <leader>f <Plug>(easymotion-bd-w)
 map <leader>L <Plug>(easymotion-bd-jk)
-" nmap <leader>f <Plug>(easymotion-overwin-w)
-" nmap <leader>L <Plug>(easymotion-overwin-line)
-nnoremap <F2> :NERDTreeToggle<CR>
 
-nnoremap <leader>td :OpenTodo<CR>
-nnoremap <leader>ts :Startify<CR>
-nnoremap <leader>tn :FloatermNew<CR>
-nnoremap <leader>tt :FloatermToggle<CR>
+nnoremap <F2> <Cmd>NERDTreeToggle<CR>
+
+nnoremap <leader>td <Cmd>OpenTodo<CR>
+nnoremap <leader>ts <Cmd>Startify<CR>
+nnoremap <leader>tn <Cmd>FloatermNew<CR>
+nnoremap <leader>tt <Cmd>FloatermToggle<CR>
 
 
 highlight  CursorLine          guifg=NONE   guibg=#3a3d4d  guisp=#3a3d4d  ctermbg=236
@@ -273,7 +272,7 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickly Run
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>r :call CompileRunGcc()<CR>
+map <leader>r <Cmd>call CompileRunGcc()<CR>
 
 func! CompileRunGcc()
     exec "w"
@@ -288,7 +287,7 @@ func! CompileRunGcc()
     elseif &filetype == 'cmake'
         exec '!cmake -P %'
     elseif &filetype == 'sh'
-        :!time bash %
+        <Cmd>!time bash %
     endif
 endfunc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
