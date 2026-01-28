@@ -287,7 +287,7 @@ func! CompileRunGcc()
     elseif &filetype == 'cmake'
         exec '!cmake -P %'
     elseif &filetype == 'sh'
-        <Cmd>!time bash %
+        :!time bash %
     endif
 endfunc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
