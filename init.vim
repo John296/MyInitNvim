@@ -90,7 +90,7 @@ Plug 'MeanderingProgrammer/render-markdown.nvim'
 " Plug 'nvim-treesitter/nvim-treesitter', { 'do' : ':TSUpdate' }
 """
 Plug 'neovim/nvim-lspconfig'
-Plug 'saghen/blink.cmp'
+Plug 'saghen/blink.cmp', {'branch': 'v1'}
 """
 Plug 'folke/noice.nvim'
 Plug 'rcarriga/nvim-notify'
