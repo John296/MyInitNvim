@@ -47,15 +47,15 @@ syntax on
 let mapleader=","
 
 inoremap jj <ESC>
-nmap <leader>s :w<CR>
-nmap <leader>q :q<CR>
-nmap <leader>x :bd<CR>
+nmap <leader>s <Cmd>w<CR>
+nmap <leader>q <Cmd>q<CR>
+nmap <leader>x <Cmd>bd<CR>
 nmap <leader>c <C-w>c
-nmap <leader>m :nohlsearch<CR>
-nmap <leader>w :set splitright<CR>:vsplit<CR>
+nmap <leader>m <Cmd>nohlsearch<CR>
+nmap <leader>w <Cmd>set splitright<CR>:vsplit<CR>
 
-nnoremap gn :bnext<CR>:lcd %:p:h<CR>
-nnoremap gp :bprevious<CR>:lcd %:p:h<CR>
+nnoremap gn <Cmd>bnext<CR>:lcd %:p:h<CR>
+nnoremap gp <Cmd>bprevious<CR>:lcd %:p:h<CR>
 
 if has("win32")
     call plug#begin('~/AppData/Local/nvim/plugged')
@@ -91,7 +91,7 @@ Plug 'MeanderingProgrammer/render-markdown.nvim'
 " Plug 'nvim-treesitter/nvim-treesitter', { 'do' : ':TSUpdate' }
 """
 Plug 'neovim/nvim-lspconfig'
-Plug 'saghen/blink.cmp'
+Plug 'saghen/blink.cmp', { 'branch': 'v1' }
 """
 Plug 'folke/noice.nvim'
 Plug 'rcarriga/nvim-notify'
@@ -108,8 +108,8 @@ color gruvbox
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-nnoremap <silent> <leader>b :call InterestingWords('n')<CR>
-nnoremap <silent> <leader>v :call UncolorAllWords()<CR>
+nnoremap <silent> <leader>b <Cmd>call InterestingWords('n')<CR>
+nnoremap <silent> <leader>v <Cmd>call UncolorAllWords()<CR>
 
 let g:python_highlight_all=1
 let g:loaded_python_provider=0
@@ -173,12 +173,12 @@ map <leader>f <Plug>(easymotion-bd-w)
 map <leader>L <Plug>(easymotion-bd-jk)
 " nmap <leader>f <Plug>(easymotion-overwin-w)
 " nmap <leader>L <Plug>(easymotion-overwin-line)
-nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <F2> <Cmd>NERDTreeToggle<CR>
 
-nnoremap <leader>td :OpenTodo<CR>
-nnoremap <leader>ts :Startify<CR>
-nnoremap <leader>tn :FloatermNew<CR>
-nnoremap <leader>tt :FloatermToggle<CR>
+nnoremap <leader>td <Cmd>OpenTodo<CR>
+nnoremap <leader>ts <Cmd>Startify<CR>
+nnoremap <leader>tn <Cmd>FloatermNew<CR>
+nnoremap <leader>tt <Cmd>FloatermToggle<CR>
 
 
 highlight  CursorLine          guifg=NONE   guibg=#3a3d4d  guisp=#3a3d4d  ctermbg=236
@@ -215,7 +215,7 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Quickly Run
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>r :call CompileRunGcc()<CR>
+map <leader>r <Cmd>call CompileRunGcc()<CR>
 
 func! CompileRunGcc()
     exec "w"

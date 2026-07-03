@@ -50,7 +50,23 @@ local function mode()
     }
 
     return mode_map[vim.fn.mode()] or '[UKN]'
+end
 
+local function get_fugitive_head()
+    -- airline#extensions#branch#get_head() 的近似替代
+    local ok, fugitive = pcall(require, 'fugitive')
+    if ok then
+        local head = fugitive.head()
+        return head and head:sub(1, 30) or ''
+    end
+    -- fallback: use gitsigns or simple git command
+    local handle = io.popen('git rev-parse --abbrev-ref HEAD 2>/dev/null')
+    if handle then
+        local branch = handle:read('*a'):gsub('\n', '')
+        handle:close()
+        return #branch > 0 and branch:sub(1, 30) or ''
+    end
+    return ''
 end
 
 require("lualine").setup({
@@ -98,6 +114,32 @@ require("lualine").setup({
             },
         },
     },
+
+    -- filetypes = {
+
+        -- ['fugitive'] = {
+            -- lualine_c = {
+                -- { '', color = { fg = 'colors.green' } },
+                -- { get_fugitive_head, color = { fg = 'colors.dark_gray' } }
+            -- },
+        -- },
+
+        -- ['nerdtree'] = {
+            -- lualine_c = { { ' ', color = { fg = 'colors.green' } } }
+        -- },
+
+        -- ['help'] = {
+            -- lualine_c = { { ' ', color = { fg = 'colors.green' } } }
+        -- },
+
+        -- ['startify'] = {
+            -- lualine_c = { { ' ', color = { fg = 'colors.green' } } }
+        -- },
+
+        -- ['vim-plug'] = {
+            -- lualine_c = { { ' ', color = { fg = 'colors.green' } } }
+        -- },
+    -- },
 
     tabline = {
         lualine_a = {
