@@ -77,7 +77,6 @@ end
 require("lualine").setup({
     options = {
         theme = my_theme,
-        -- component_separators = { left = '', right = '' },
         component_separators = '',
         section_separators = { left = '', right = '', },
         icon = { align = 'right', },
@@ -116,6 +115,23 @@ require("lualine").setup({
                 sections = { 'error' },
                 diagnostics_color = { error = { fg = colors.dark_gray, bg = colors.red }, },
                 separator = { left = '' },
+            },
+        },
+    },
+
+    extensions = {
+        --'nvim-tree'
+        {
+            filetypes = { "NvimTree" },
+            sections = {
+                lualine_a = {
+                    {
+                        function()
+                            return ""
+                        end,
+                        color = { fg = '#303030', bg = '#b8bb26' }
+                    }
+                },
             },
         },
     },
