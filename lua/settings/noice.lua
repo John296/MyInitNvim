@@ -1,10 +1,3 @@
-vim.pack.add({
-    'https://github.com/MunifTanjim/nui.nvim',
-    'https://github.com/rcarriga/nvim-notify',
-    'https://github.com/folke/noice.nvim'
-})
-
-
 local status, noice = pcall(require, 'noice')
 if not status then
     vim.notify('没有找到 noice')
