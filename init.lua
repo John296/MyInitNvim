@@ -52,7 +52,12 @@ vim.cmd([[syntax on]])
 vim.g.mapleader = ","
 
 require("plugins.smear-cursor")
+require("plugins.vimplugins")
+require("plugins.diagnostic")
+require("plugins.blink_cmp")
+require("plugins.hlchunk")
 require("plugins.lualine")
+require("plugins.dropbar")
 require("plugins.noice")
 
 local map = vim.keymap.set
