@@ -1,3 +1,8 @@
+vim.pack.add({
+    'https://github.com/nvim-tree/nvim-web-devicons',
+    'https://github.com/nvim-lualine/lualine.nvim'
+})
+
 local colors = {
     dark_gray   = '#303030',
     med_gray_hi = '#444444',
