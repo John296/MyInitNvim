@@ -129,38 +129,26 @@ require("lualine").setup({
                         function()
                             return ""
                         end,
-                        color = { fg = '#303030', bg = '#b8bb26' }
+                        color = { fg = colors.dark_gray, bg = colors.green}
+                    }
+                },
+            },
+        },
+
+        {
+            filetypes = { "help" },
+            sections = {
+                lualine_a = {
+                    {
+                        function()
+                            return ""
+                        end,
+                        color = { fg = colors.dark_gray, bg = colors.green}
                     }
                 },
             },
         },
     },
-
-    -- filetypes = {
-
-        -- ['fugitive'] = {
-            -- lualine_c = {
-                -- { '', color = { fg = 'colors.green' } },
-                -- { get_fugitive_head, color = { fg = 'colors.dark_gray' } }
-            -- },
-        -- },
-
-        -- ['nerdtree'] = {
-            -- lualine_c = { { ' ', color = { fg = 'colors.green' } } }
-        -- },
-
-        -- ['help'] = {
-            -- lualine_c = { { ' ', color = { fg = 'colors.green' } } }
-        -- },
-
-        -- ['startify'] = {
-            -- lualine_c = { { ' ', color = { fg = 'colors.green' } } }
-        -- },
-
-        -- ['vim-plug'] = {
-            -- lualine_c = { { ' ', color = { fg = 'colors.green' } } }
-        -- },
-    -- },
 
     tabline = {
         lualine_a = {
