@@ -52,9 +52,11 @@ vim.cmd([[syntax on]])
 vim.g.mapleader = ","
 
 require("plugins.smear-cursor")
+require("plugins.colorscheme")
 require("plugins.vimplugins")
 require("plugins.diagnostic")
 require("plugins.blink_cmp")
+require("plugins.colorizer")
 require("plugins.nvimtree")
 require("plugins.devicons")
 require("plugins.hlchunk")
@@ -74,8 +76,6 @@ map("n", "<leader>w", "<Cmd>set splitright<CR>:vsplit<CR>", { noremap = true, si
 
 map("n", "gn", "<Cmd>bnext<CR>:lcd %:p:h<CR>", { noremap = true, silent = true })
 map("n", "gp", "<Cmd>bprevious<CR>:lcd %:p:h<CR>", { noremap = true, silent = true })
-
-vim.cmd("colorscheme wildcharm")
 
 -- autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 -- autocmd InsertLeave * if pumvisible() == 0|pclose|endif

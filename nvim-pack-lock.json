@@ -1,5 +1,9 @@
 {
   "plugins": {
+    "Colorizer": {
+      "rev": "f5d69c0dea9f36e2eb025c7d86cc62b5a0d8af62",
+      "src": "https://github.com/chrisbra/Colorizer"
+    },
     "auto-pairs": {
       "rev": "39f06b873a8449af8ff6a3eee716d3da14d63a76",
       "src": "https://github.com/jiangmiao/auto-pairs"
@@ -16,6 +20,10 @@
     "dropbar.nvim": {
       "rev": "808ba31cde89aec8833e9789f5e04557cd31c9e1",
       "src": "https://github.com/Bekaboo/dropbar.nvim"
+    },
+    "gruvbox.nvim": {
+      "rev": "154eb5ff5b96d0641307113fa385eaf0d36d9796",
+      "src": "https://github.com/ellisonleao/gruvbox.nvim"
     },
     "hlchunk.nvim": {
       "rev": "fb5a16ecc4ff15772189679ffdede6ee879288ec",
