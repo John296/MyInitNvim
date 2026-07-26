@@ -51,6 +51,7 @@ vim.cmd([[syntax on]])
 
 vim.g.mapleader = ","
 
+require("plugins.nvim_colorizer")
 require("plugins.smear-cursor")
 require("plugins.colorscheme")
 require("plugins.vimplugins")
