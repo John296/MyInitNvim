@@ -1,4 +1,5 @@
 .vsnip/
 plugged/
 autoload/
+nvim-pack-lock.json
 .DS_Store
