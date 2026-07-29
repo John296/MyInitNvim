@@ -77,7 +77,7 @@ end
 require("lualine").setup({
     options = {
         theme = my_theme,
-        component_separators = '',
+        component_separators = { left = ')', right = '(' },
         section_separators = { left = '', right = '', },
         icon = { align = 'right', },
         path = 2,
