@@ -1,4 +1,5 @@
 vim.pack.add({
+    "https://github.com/godlygeek/tabular",
     "https://github.com/tpope/vim-surround",
     "https://github.com/tpope/vim-fugitive",
     "https://github.com/jiangmiao/auto-pairs",
