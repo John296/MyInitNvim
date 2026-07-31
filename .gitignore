@@ -2,4 +2,5 @@
 plugged/
 autoload/
 nvim-pack-lock.json
+.luarc.json
 .DS_Store

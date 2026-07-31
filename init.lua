@@ -63,6 +63,7 @@ require("plugins.hlchunk")
 require("plugins.lualine")
 require("plugins.dropbar")
 require("plugins.noice")
+require("plugins.lsp")
 
 local map = vim.keymap.set
 
