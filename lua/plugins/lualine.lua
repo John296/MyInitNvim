@@ -37,7 +37,7 @@ local my_theme = {
 local function location()
   local line = vim.fn.line('.')
   local col = vim.fn.charcol('.')
-  return string.format(' %d%-2d', line, col)
+  return string.format(' %d%d', line, col)
 end
 
 local function mode()
@@ -100,7 +100,6 @@ require("lualine").setup({
     },
 
     extensions = {
-        --'nvim-tree'
         {
             filetypes = { "NvimTree" },
             sections = {
@@ -128,6 +127,21 @@ require("lualine").setup({
                 },
             },
         },
+
+        {
+            filetypes = { "better_term" },
+            sections = {
+                lualine_a = {
+                    {
+                        function()
+                            return ""
+                        end,
+                        color = { fg = colors.dark_gray, bg = colors.green}
+                    }
+                }
+
+            }
+        }
     },
 
     tabline = {

@@ -63,6 +63,7 @@ require("plugins.hlchunk")
 require("plugins.lualine")
 require("plugins.dropbar")
 require("plugins.noice")
+require("plugins.term")
 require("plugins.lsp")
 
 local map = vim.keymap.set
@@ -77,9 +78,6 @@ map("n", "<leader>w", "<Cmd>set splitright<CR>:vsplit<CR>", { noremap = true, si
 
 map("n", "gn", "<Cmd>bnext<CR>:lcd %:p:h<CR>", { noremap = true, silent = true })
 map("n", "gp", "<Cmd>bprevious<CR>:lcd %:p:h<CR>", { noremap = true, silent = true })
-
--- autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
--- autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 vim.cmd("highlight  CursorLine guifg=NONE guibg=#3a3d4d guisp=#3a3d4d ctermbg=236")
 vim.cmd("highlight  CursorLine guifg=NONE guibg=#3a3d4d guisp=#3a3d4d ctermbg=236")
