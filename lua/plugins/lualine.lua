@@ -73,7 +73,7 @@ require("lualine").setup({
         lualine_a = { mode },
         lualine_b = { { 'FugitiveHead', icon = '' }, },
         lualine_c = {
-            { 'filename', file_status = false, },
+            { 'filename' },
         },
         lualine_x = {
             { 'filetype' },
