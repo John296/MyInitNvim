@@ -83,7 +83,7 @@ require("lualine").setup({
             { 'fileformat', separator = { left = '' }, },
         },
         lualine_z = {
-            { '%p%%' },
+            { 'progress' },  -- { '%p%%' },
             { location },
             {
                 'diagnostics',
