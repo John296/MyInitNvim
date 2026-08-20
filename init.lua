@@ -71,6 +71,7 @@ require("plugins.hlchunk")
 require("plugins.lualine")
 require("plugins.dropbar")
 require("plugins.noice")
+require("plugins.board")
 require("plugins.term")
 require("plugins.lsp")
 
