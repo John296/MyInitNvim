@@ -49,6 +49,14 @@ vim.opt.wildmenu = true
 vim.cmd([[syntax enable]])
 vim.cmd([[syntax on]])
 
+vim.api.nvim_create_autocmd({"InsertLeave", "CursorMovedI"}, {
+  callback = function()
+    if vim.fn.pumvisible() == 0 then
+      vim.cmd("pclose")
+    end
+  end,
+})
+
 vim.g.mapleader = ","
 
 require("plugins.nvim_colorizer")
