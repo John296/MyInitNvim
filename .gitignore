@@ -1,6 +1,7 @@
 .vsnip/
 plugged/
 autoload/
+snippets/
 nvim-pack-lock.json
 .luarc.json
 .DS_Store

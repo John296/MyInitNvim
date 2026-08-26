@@ -16,6 +16,10 @@ require("blink.cmp").setup({
             'select_prev',
             fallback = 'accept',
         },
+
+        ['<C-l>'] = {
+            'accept',
+        },
     },
 
     appearance = {
