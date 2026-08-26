@@ -73,6 +73,7 @@ require("plugins.dropbar")
 require("plugins.noice")
 require("plugins.board")
 require("plugins.term")
+require("plugins.todo")
 require("plugins.lsp")
 
 local map = vim.keymap.set

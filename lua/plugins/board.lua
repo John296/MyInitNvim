@@ -14,4 +14,4 @@ require("dashboard").setup({
     },
 })
 
-vim.keymap.set("n", "<leader>td", "<Cmd>Dashboard<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>ts", "<Cmd>Dashboard<CR>", { noremap = true, silent = true })
