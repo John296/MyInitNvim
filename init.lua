@@ -77,17 +77,18 @@ require("plugins.todo")
 require("plugins.lsp")
 
 local map = vim.keymap.set
+local opt = { noremap = true, silent = true }
 
-map("i", "jj", "<ESC>", { noremap = true, silent = true })
-map("n", "<leader>s", "<Cmd>w<CR>", { noremap = true, silent = true })
-map("n", "<leader>q", "<Cmd>q<CR>", { noremap = true, silent = true })
-map("n", "<leader>x", "<Cmd>bd<CR>", { noremap = true, silent = true })
-map("n", "<leader>c", "<C-w>c", { noremap = true, silent = true })
-map("n", "<leader>m", "<Cmd>nohlsearch<CR>", { noremap = true, silent = true })
-map("n", "<leader>w", "<Cmd>set splitright<CR>:vsplit<CR>", { noremap = true, silent = true })
+map("i", "jj", "<ESC>", opt)
+map("n", "<leader>s", "<Cmd>w<CR>", opt)
+map("n", "<leader>q", "<Cmd>q<CR>", opt)
+map("n", "<leader>x", "<Cmd>bd<CR>", opt)
+map("n", "<leader>c", "<C-w>c", opt)
+map("n", "<leader>m", "<Cmd>nohlsearch<CR>", opt)
+map("n", "<leader>w", "<Cmd>set splitright<CR>:vsplit<CR>", opt)
 
-map("n", "gn", "<Cmd>bnext<CR>:lcd %:p:h<CR>", { noremap = true, silent = true })
-map("n", "gp", "<Cmd>bprevious<CR>:lcd %:p:h<CR>", { noremap = true, silent = true })
+map("n", "gn", "<Cmd>bnext<CR>:lcd %:p:h<CR>", opt)
+map("n", "gp", "<Cmd>bprevious<CR>:lcd %:p:h<CR>", opt)
 
 vim.cmd("highlight  CursorLine guifg=NONE guibg=#3a3d4d guisp=#3a3d4d ctermbg=236")
 vim.cmd("highlight  CursorLine guifg=NONE guibg=#3a3d4d guisp=#3a3d4d ctermbg=236")
@@ -124,4 +125,4 @@ local function compile_run_gcc()
     end
 end
 
-map("n", "<leader>r", compile_run_gcc, { noremap = true, silent = false })
+map("n", "<leader>r", compile_run_gcc, opt)
